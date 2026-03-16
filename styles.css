@@ -1,3 +1,6 @@
+body {
+  background-color: beige;
+}
 
 .piano {
   display: flex;
@@ -9,8 +12,8 @@
 .keys {
   display: flex;
   align-items: flex-start;
+  cursor: pointer;
 }
-
 
 .key {
   width: 5rem;
@@ -18,10 +21,28 @@
   border: 1px solid black;
   position: relative;
   display: flex;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: transform 0.05s;
+}
+
+.white:active {
+  transform: scaleY(1.02);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.3);
 }
 
 .white {
   background-color: white;
+  transform-origin: top;
+}
+
+.white:hover {
+  background-color: rgb(239, 239, 239);
+}
+
+.C,.B {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .black {
@@ -31,4 +52,14 @@
   margin-left: -1.5rem;
   margin-right: -1.5rem;
   z-index: 2;
+  transform-origin: top;
+}
+
+.black:hover {
+  background-color: rgb(58, 58, 58);
+}
+
+.black:active {
+  transform: scaleY(1.02);
+  box-shadow: 0 4px 3px rgba(0,0,0,0.3);
 }
