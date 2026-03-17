@@ -17,7 +17,7 @@ body {
 
 .key {
   width: 5rem;
-  height: 15rem;
+  height: 17rem;
   border: 1px solid black;
   position: relative;
   display: flex;
@@ -53,6 +53,7 @@ body {
   margin-right: -1.5rem;
   z-index: 2;
   transform-origin: top;
+  box-shadow: 0 4px 3px rgba(0,0,0,0.3);
 }
 
 .black:hover {
@@ -60,6 +61,6 @@ body {
 }
 
 .black:active {
-  transform: scaleY(1.02);
-  box-shadow: 0 4px 3px rgba(0,0,0,0.3);
+  transform: scaleY(0.98);
+  box-shadow: 0 0 0;
 }

@@ -1,12 +1,12 @@
 const piano = document.querySelector('.piano');
-piano.addEventListener("click", playNote);
+piano.addEventListener("mousedown", (event) => {
+  const key = event.target.closest(".key");
+  if (!key) return;
 
-function playNote(event) {
-  if (!event.target.classList.contains("key")) {
-    return;
-  }
+  playNote(key);
+});
 
-  const note = event.target.classList[2];
-
+function playNote(key) {
+  const note = key.classList[2];
   new Audio(`sounds/${note}.mp3`).play();
 }
