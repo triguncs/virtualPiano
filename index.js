@@ -57,6 +57,9 @@ function playRecording() {
 }
 
 playBtn.addEventListener('click', function() {
-  if (recordedKeys.length === 0) return;
+  if (recordedKeys.length === 0) {
+    alert("Recording is empty, Start Recording");
+    return;
+  }
   playRecording();
 });

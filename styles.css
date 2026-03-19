@@ -35,6 +35,10 @@ button:hover {
   box-shadow: 2px 3px 2px rgb(61, 61, 61);
 }
 
+button:active {
+  transform: scale(1);
+}
+
 .piano {
   display: flex;
   justify-content: center;
